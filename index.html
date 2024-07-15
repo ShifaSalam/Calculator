@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+    <style>
+        button {
+            background-color:#c9e6ff;
+            color:white;
+            height: 80px;
+            width: 100px;
+            box-shadow: 20px 20px 95px 10px #161616 inset;
+        }
+        .op {
+            box-shadow: 20px 20px 95px 10px #292e35 inset;
+        }
+        button:hover{
+            background-color: aliceblue;
+        }
+        .container{
+            background-color: #3C4857;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container w-25 mt-5 rounded">
+        <div class="text-center pt-3">
+            <h3 class="text-secondary py-3">Simple calculator</h3>
+            <input type="text" style="height: 81px;" class="container-fluid rounded" id="display">
+        </div>
+        <div class="d-flex mt-2">
+            <button class="text-danger me-1 op" id="c" onclick="allClear()">C</button>
+            <button class="text-warning me-1 op" id="del" onclick="backSpace()">BACK</button>
+            <button class="text-dark op e" id="=" onclick="getResult()" style="width: 170px;">=</button>
+        </div>
+        <div class="d-flex mt-1">
+            <button class=" me-1" id="7" onclick="writeExp(event)">7</button>
+            <button class=" me-1" id="8" onclick="writeExp(event)">8</button>
+            <button class=" me-1" id="9" onclick="writeExp(event)">9</button>
+            <button class="text-info op" id="+" onclick="writeExp(event)">+</button>
+        </div>
+        <div class="d-flex mt-1">
+            <button class=" me-1" id="4" onclick="writeExp(event)">4</button>
+            <button class=" me-1" id="5" onclick="writeExp(event)">5</button>
+            <button class=" me-1" id="6" onclick="writeExp(event)">6</button>
+            <button class="text-info op" id="-" onclick="writeExp(event)">-</button>
+        </div>
+        <div class="d-flex mt-1">
+            <button class=" me-1" id="1" onclick="writeExp(event)">1</button>
+            <button class=" me-1" id="2" onclick="writeExp(event)">2</button>
+            <button class=" me-1" id="3" onclick="writeExp(event)">3</button>
+            <button class="text-info op" id="*" onclick="writeExp(event)">×</button>
+        </div>
+        <div class="d-flex mt-1 pb-3">
+            <button class=" me-1" id="." onclick="writeExp(event)">.</button>
+            <button class=" me-1" id="0" onclick="writeExp(event)">0</button>
+            <button class=" me-1" id="00" onclick="writeExp(event)">00</button>
+            <button class="text-info op" id="/" onclick="writeExp(event)">÷</button>
+        </div>
+    </div>
+</body>
+
+<script src="./main.js"></script>
+
+</html>
